@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statue Red Light Green Light</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/p5@2.3.3/lib/p5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+<script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+</head>
+<body>
+<div id="start-screen">
+  <div class="start-card">
+    <h1>Night at the Museum</h1>
+    <p class="tagline">Don't get caught by the officer.<br>Match the statue when the light is on you.</p>
+    <button id="start-btn">Start Game</button>
+  </div>
+</div>
+
+<div id="game" class="hidden">
+  <header>
+    <div class="stat">Statue <span id="round-label">1 of 5</span></div>
+    <div class="stat">Score <strong id="score">0</strong></div>
+    <button id="pause-btn">Pause</button>
+  </header>
+
+  <main>
+    <div class="left">
+      <img id="statue-photo" src="standing-woman.jpg" alt="Statue">
+      <h2 id="statue-name">Standing Woman</h2>
+      <p id="statue-instruction">Stand upright and fold your arms across your body.</p>
+      <p id="closeness" class="closeness">Closeness: —</p>
+    </div>
+
+    <div class="center">
+      <div id="canvas-holder"></div>
+      <p id="feedback">Get ready…</p>
+    </div>
+  </main>
+</div>
+
+<script src="sketch.js"></script>
+</body>
+</html>
